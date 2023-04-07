@@ -1,6 +1,7 @@
 public class CreditPaymentService {
-    public double payment(double credit, double months, double percents) {
-        double coefficient = (percents / 100 / months);
+    public double payment(double credit, int months, double percents) {
+
+        double coefficient = (percents / 100 / 12);
 
         double plusOne = (1 + coefficient);
         double plusOneInLevel = (Math.pow(plusOne, months));
